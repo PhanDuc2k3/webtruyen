@@ -1,0 +1,154 @@
+.HeaderContainer{
+    display: flex;
+    background: #FAB20D;
+    margin: 0px;
+    padding: 1% 10%;
+}
+
+.custom-search-container {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr auto; // Input chiếm 1 phần, button tự động kích thước
+}
+
+.custom-input {
+    margin-left: 200px;
+    height: 50px; // Tùy chỉnh chiều cao
+    width: 500px;
+    background: #F3CF7C;
+    color: black;
+    border-radius: 0%;
+    &::placeholder{
+        color: white;
+        
+    }
+     .ant-input::placeholder {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+.custom-button {
+    width: 100px;
+    background: black;
+    font-size: 18px;
+    border-radius: 0%;
+    height: 50px; // Đảm bảo button có chiều cao khớp với input
+    
+}
+
+.menu-icon {
+    margin-top: 20px;
+    font-size: 40px !important; // Đảm bảo phóng to icon
+    margin-left: 1000%;
+    background: none;
+    border: none;
+    cursor: pointer;&:hover {
+            background: none; // Loại bỏ background khi hover
+            color: black; // Màu icon không đổi khi hover
+        }
+
+    
+}
+.ant-btn-primary:hover {
+    background-color: transparent !important; // Loại bỏ nền khi hover
+    transition: all 0.5s ease;
+}
+.menu-icon .anticon {
+    font-size: 40px !important; // Áp dụng cho tất cả icon trong nút
+
+}
+
+.custom-drawer {
+    background-color: #FAB20D !important;
+    .ant-drawer-body {
+        background-color: #FAB20D;
+    }
+
+    .menu-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                color: #1890ff;
+            }
+        }
+    }
+}
+
+.div-container-button-slider{
+    display: flex;
+    gap: 10px;
+}
+
+.button-css-slider{
+    border: 2px solid white;
+    background-color: #FAB20D;
+    font-size: 24px;
+    color: gray;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    
+}
+
+.button-css-slider:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
+}
+.menu-list {
+    list-style: none;
+    /* Xóa dấu bullet */
+    padding: 0;
+    margin: 0;
+    max-height: 600px;
+    /* Giới hạn chiều cao để kích hoạt thanh cuộn */
+    overflow-y: auto;
+    /* Thêm thanh cuộn dọc nếu cần */
+}
+
+.menu-list li {
+    
+    position: relative;
+    padding: 30px 30px !important;
+    /* Khoảng cách trong phần tử */
+    
+    border-bottom: 1px solid #ccc;
+    /* Tạo thanh ngang */
+    font-size: 25px !important;
+    text-align: center;
+    color: white;
+}
+
+.menu-list li:hover {
+ 
+    color: gray !important;
+    /* Màu nền khi hover */
+    cursor: pointer;
+    transition: all 0.5s ease;
+    /* Thêm hiệu ứng con trỏ */
+}
+
+/* Tùy chỉnh thanh cuộn (nếu muốn) */
+.menu-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.menu-list::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Màu thanh cuộn */
+    border-radius: 4px;
+}
+
+.menu-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Màu thanh cuộn khi hover */
+}
+
