@@ -1,0 +1,45 @@
+.FooterContainer {
+    background: #363636;
+    padding: 3% 20%;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.footer-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    padding: 0px 30px;
+    position: relative;
+}
+
+.footer-list li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    /* Điều chỉnh vị trí để khớp với padding */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 70%;
+    background-color: white;
+}
+
+.footer-list li a {
+    color: white;
+    /* Màu chữ mặc định của liên kết */
+    text-decoration: none;
+    /* Loại bỏ gạch chân mặc định */
+    transition: color 0.3s;
+    /* Hiệu ứng chuyển màu mượt mà khi hover */
+}
+
+.footer-list li:hover a {
+    color: #FAB20D;
+    /* Màu chữ khi hover */
+}
