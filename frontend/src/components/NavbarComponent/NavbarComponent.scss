@@ -50,7 +50,7 @@
     margin: 0;
     border: 1px solid #ccc;
     z-index: 1000;
-    width: 150px;
+    width: 200px;
     /* Chiều rộng của dropdown */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     /* Đổ bóng */
@@ -72,4 +72,26 @@
 /* Hiển thị dropdown khi hover */
 .navbar>li:hover .dropdown {
     display: block;
+}
+
+.navbar-button-login-register{
+    padding-left: 30%;
+    
+}
+.navbar-button-login-register button{
+    width: 100px;
+    height: 50px;
+    border: 2px solid gray;
+    color: gray;
+    border-radius: 25px;
+    font-size: 20px;
+    background: black;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.navbar-button-login-register button:hover{
+    border:none;
+    color: white;
+    transition: all 0.5s ease;
 }
