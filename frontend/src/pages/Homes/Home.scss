@@ -1,0 +1,63 @@
+.divHome{
+    padding: 1% 10%;
+    background-color: #262626;
+    color:white;
+    font-size: 20px;
+
+}
+
+.Latest_manga_update_title{
+        font-weight: bold;
+        font-size: 24px;
+        padding: 5px;
+        border-bottom: 1px solid white;
+}
+.Latest_manga_update_title p{
+    margin: 0px;
+}
+
+.Latest_manga_update_cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép các card xuống dòng */
+    justify-content: flex-start;
+    /* Bắt đầu từ trái sang phải */
+    gap: 20px;
+    /* Khoảng cách đều giữa các card */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.manga-card {
+    flex: 1 1 calc(16.66% - 20px);
+    /* Đảm bảo 6 card trên 1 dòng */
+    max-width: calc(16.66% - 20px);
+    /* Giới hạn độ rộng */
+    box-sizing: border-box;
+    /* Bao gồm padding và border trong width */
+}
+
+.pagination-controls{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-controls button{
+    width: 100px;
+    height: 40px;
+    background-color: #262626;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px
+}
+
+.pagination-controls button:hover{
+    background-color: #FAB20D;
+}
+
+.pagination-controls p{
+    margin: 0px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
