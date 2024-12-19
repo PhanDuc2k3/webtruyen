@@ -1,0 +1,77 @@
+.login-container{
+    color:white;
+    width: 100%;
+    height: 500px;
+    border: 1px solid white;
+    margin: 30px 300px;
+}
+
+.login-container h1{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #FAB20D;
+    
+}
+
+form {
+    text-align: center;
+}
+
+.input-login-css {
+    display: flex;
+    /* Sử dụng Flexbox để căn chỉnh hàng ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-bottom: 15px;
+    /* Khoảng cách giữa các hàng */
+}
+
+.input-login-css span {
+    font-size: 24px;
+    padding: 10px;
+    color: #FAB20D;
+    flex: 3;
+    /* Chiếm 30% không gian */
+    text-align: right;
+    /* Căn phải để gọn */
+}
+
+.input-login-css input[type="email"],
+.input-login-css input[type="password"] {
+    margin-right: 200px;
+    width: 100%;
+    /* Để input tự động chiếm hết phần không gian còn lại */
+    height: 30px;
+    font-size: 20px;
+    background: #262626;
+    color: white;
+    border: 1px solid orange;
+    flex: 5;
+    /* Chiếm 70% không gian */
+    margin-left: 10px;
+    /* Khoảng cách giữa span và input */
+}
+.remember-login-css{
+    margin-right: 230px;
+}
+
+.remember-login-css input[type="checkbox"] {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.button-login-css{
+    margin-top: 30px;
+    padding-right: 2    00px;
+}
+.button-login-css button{
+    width: 150px;
+    height: 40px;
+    background: white;
+    font-size: 16px;
+}
+
+.button-login-css button:hover{
+    background: #FAB20D;
+}

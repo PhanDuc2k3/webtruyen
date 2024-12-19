@@ -4,7 +4,7 @@ const FooterComponent = () => {
     return (
         <div className="FooterContainer">
             <ul className="footer-list">
-                <li><a href="#home">HOME</a></li>
+                <li><a href="/">HOME</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#about-us">ABOUT US</a></li>
                 <li><a href="#cookie-policy">COOKIE POLICY</a></li>

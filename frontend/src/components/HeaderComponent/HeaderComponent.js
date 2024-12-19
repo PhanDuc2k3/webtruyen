@@ -3,14 +3,22 @@ import { Input, Button, Drawer } from "antd";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons"; // Import icon 3 vạch và dấu X
 import "./HeaderComponent.scss";
 import IconWeb from "../../assets/iconWeb.png";
-
+import { useNavigate } from "react-router-dom";
 const { Search } = Input;
 
 const HeaderComponent = () => {
     // Quản lý trạng thái đóng/mở Drawer
     const [open, setOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State để kiểm tra menu đang mở hay không
+    const gotoLogin = useNavigate();
+    const gotoSignUp = useNavigate();
+    const handleSingin = () => {
+        gotoLogin("/login");
+    }
 
+    const handleSignup = () => {
+        gotoSignUp("/signup");
+    }
     const showDrawer = () => {
         setOpen(true);
         setIsMenuOpen(true); // Khi mở menu, thay đổi icon thành dấu X
@@ -65,10 +73,10 @@ const HeaderComponent = () => {
                     {/* Danh sách menu */}
                     <div className="div-container-button-slider"
                     style={{paddingTop:'20px'}}>
-                        <button className="button-css-slider">
+                        <button className="button-css-slider" onClick={handleSingin}>
                             Sign in
                         </button>
-                        <button className="button-css-slider">
+                        <button className="button-css-slider" onClick={handleSignup}>
                             Sign up
                         </button>
                         

@@ -1,7 +1,19 @@
 import React from "react";
 import "./NavbarComponent.scss"
-
+import { useNavigate } from "react-router-dom";
 const NavbarComponent = () => {
+    
+    const nagivate = useNavigate();
+
+    const handleSingin = () => {
+        nagivate("/login");
+    }
+
+    const handleSignup = () => {
+        nagivate("/signup");
+    }
+    
+
     return (
         <div>
             <div class="navbar-all">
@@ -41,10 +53,10 @@ const NavbarComponent = () => {
                     </li>
                 </ul>
                 <div className="navbar-button-login-register">
-                    <button>
+                    <button onClick={handleSingin}>
                         Sign in
                     </button>    
-                    <button>
+                    <button onClick={handleSignup}>
                         Sign Up
                     </button> 
                 </div>
