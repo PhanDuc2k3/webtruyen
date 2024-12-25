@@ -11,6 +11,11 @@ const Home = () => {
     imageUrl:
       "https://static.minhtuanmobile.com/uploads/editer/images/2024/04/bo-hinh-nen-dien-thoai-chu-de-one-piece-doc-dao-1.webp",
     title: "One Piece",
+    rating: '4',
+     chapters: [
+    { name: "Chapter 1090", number: "1090", link: "https://example.com/1090",daysAgo: 2 },
+    { name: "Chapter 1089", number: "1089", link: "https://example.com/1089",daysAgo: 3 },
+  ],
   });
 
   const [currentPage, setCurrentPage] = useState(1); // State cho trang hiện tại
@@ -42,10 +47,17 @@ const Home = () => {
         {/* Hiển thị card */}
         <div className="Latest_manga_update_cards">
           {currentCards.map((card, index) => (
-            <MangaCard key={index} imageUrl={card.imageUrl}>
+            <MangaCard
+              key={index}
+              imageUrl={card.imageUrl}
+              rating={card.rating}
+              chapters={card.chapters} // Truyền prop chapters
+            >
               <p>{card.title}</p>
             </MangaCard>
           ))}
+
+
         </div>
 
         {/* Điều hướng phân trang */}
