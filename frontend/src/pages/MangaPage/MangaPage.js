@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import "./Home.scss";
+import React,{useState} from "react";
 import MangaCard from "../../components/MangaCard/MangaCard";
-
-const Home = () => {
+import "./MangaPage.scss"
+const MangaPage = () => {
   const totalCards = 50; // Tổng số card (ví dụ)
   const cardsPerPage = 24; // Số card tối đa trên mỗi trang
 
@@ -42,7 +41,7 @@ const Home = () => {
     <div className="divHome">
       <div className="Latest_manga_update">
         <div className="Latest_manga_update_title">
-          <p>LATEST UPDATE</p>
+          <p>TOP MANGA UPDATE</p>
         </div>
         {/* Hiển thị card */}
         <div className="Latest_manga_update_cards">
@@ -77,4 +76,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MangaPage;

@@ -22,7 +22,7 @@ const SignUp = () => {
                     <input type="password" placeholder="Nhập mật khẩu" required/>
                 </div>
                 <div className="input-signup-css">
-                    <span>Password:</span>
+                    <span>Confrim Password:</span>
                     <input type="password" placeholder="Nhập mật khẩu" required/>
                 </div>
                 <div className="remember-signup-css">

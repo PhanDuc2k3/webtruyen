@@ -45,7 +45,7 @@ form {
     width: 100%;
     /* Để input tự động chiếm hết phần không gian còn lại */
     height: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     background: #262626;
     color: white;
@@ -53,6 +53,7 @@ form {
     flex: 9;
     /* Chiếm 70% không gian */
     margin-left: 10px;
+    margin-bottom: 20px;
     /* Khoảng cách giữa span và input */
 }
 

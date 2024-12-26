@@ -13,6 +13,17 @@ const NavbarComponent = () => {
         nagivate("/signup");
     }
     
+    const handleMangaPage = () => {
+        nagivate("/mangaPage");
+    }
+
+    const handleManhuaPage = () => {
+        nagivate("/manhuaPage");
+    }
+
+    const handleManhwaPage = () => {
+        nagivate("/manhwaPage");
+    }
 
     return (
         <div>
@@ -21,9 +32,9 @@ const NavbarComponent = () => {
                     <li>
                      COMICS
                         <ul class="dropdown">
-                            <li>TOP MANHWA</li>
-                            <li>TOP MANHUA</li>
-                            <li>TOP MANGA</li>
+                            <li onClick={handleManhwaPage}>TOP MANHWA</li>
+                            <li onClick={handleManhuaPage}>TOP MANHUA</li>
+                            <li onClick={handleMangaPage}>TOP MANGA</li>
                         </ul>
                     </li>
                     <li >
