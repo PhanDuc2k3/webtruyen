@@ -1,63 +1,87 @@
-.divHome{
-   
+.divHome {
     background-color: #262626;
-    color:white;
+    color: white;
     font-size: 20px;
 
+    // Responsive cho điện thoại
+    @media (max-width: 768px) {
+        font-size: 16px;
+        padding: 10px;
+    }
 }
 
-.Latest_manga_update_title{
-        font-weight: bold;
-        font-size: 24px;
-        padding: 5px;
-        border-bottom: 1px solid white;
-}
-.Latest_manga_update_title p{
-    margin: 0px;
+.Latest_manga_update_title {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 5px;
+    border-bottom: 1px solid white;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        padding: 3px;
+    }
 }
 
 .Latest_manga_update_cards {
     display: flex;
-    flex-wrap: wrap;
-    /* Cho phép các card xuống dòng */
-    justify-content: flex-start;
-    /* Bắt đầu từ trái sang phải */
-    gap: 20px;
-    /* Khoảng cách đều giữa các card */
-    padding: 20px;
-    box-sizing: border-box;
+    flex-wrap: wrap; // Đảm bảo các card xuống dòng khi không đủ không gian
+    justify-content: space-between; // Căn đều các card
+    gap: 0; // Không cần khoảng cách giữa các card
+    padding: 10px;
+    box-sizing: border-box; // Bao gồm padding trong kích thước container
 }
 
 .manga-card {
-    flex: 1 1 calc(16.66% - 20px);
-    /* Đảm bảo 6 card trên 1 dòng */
-    max-width: calc(16.66% - 20px);
-    /* Giới hạn độ rộng */
+    flex: 1 6 16%; // Mỗi card chiếm 50%
+    max-width: 50%; // Đảm bảo không vượt quá 50%
+    padding: 5px; // Khoảng cách trong từng card
     box-sizing: border-box;
-    /* Bao gồm padding và border trong width */
+
+    @media (max-width: 768px) {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    @media (max-width: 576px) {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
 }
 
-.pagination-controls{
+.pagination-controls {
     display: flex;
     justify-content: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; // Khoảng cách giữa các nút
+    }
 }
 
-.pagination-controls button{
+.pagination-controls button {
     width: 100px;
     height: 40px;
     background-color: #262626;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border: 0px
+    border: 0px;
+
+    @media (max-width: 768px) {
+        width: 80px;
+        height: 35px;
+        font-size: 18px;
+    }
 }
 
-.pagination-controls button:hover{
-    background-color: #FAB20D;
-}
-
-.pagination-controls p{
+.pagination-controls p {
     margin: 0px;
     padding-left: 15px;
     padding-top: 5px;
+
+    @media (max-width: 768px) {
+        padding-left: 0px;
+        text-align: center;
+    }
 }
