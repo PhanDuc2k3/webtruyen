@@ -12,14 +12,24 @@
     background-color: #464646;
     box-sizing: border-box;
     /* Gồm cả padding và border trong width */
+    @media (max-width: 576px) {
+
+        flex: 1 1 45%;
+        height: 200px;
+        margin: 5px;
+    }
 }
 
 .manga-image {
-    height: 66.66%;
+    height: 66%;
     /* Chính xác 2/3 chiều cao card */
     overflow: hidden;
     flex-shrink: 0;
     /* Đảm bảo không co lại */
+    @media (max-width:576px) {
+            height: 55%;
+    
+        }
 }
 
 .manga-image img {
@@ -30,7 +40,7 @@
 }
 
 .manga-content {
-    height: 33.33%;
+    height: 9%;
     /* Chính xác 1/3 chiều cao card */
     display: flex;
     justify-content: center;
@@ -42,18 +52,27 @@
 }
 
 .manga-rating {
+    height: 10%;
     font-size: 1.5rem;
     color: gold;
     /* Màu sao */
+    @media (max-width:576px) {
+        font-size: 1rem;
+    }
 }
 
 .manga-chapters {
+    height: 30%;
     font-size: 0.9rem;
     color: #555;
     display: flex;
     flex-direction: column;
     gap: 10px;
     /* Khoảng cách giữa các nút */
+    @media (max-width:576px) {
+        font-size: 0.5rem;
+        
+    }
 }
 
 .chapter-button {
@@ -62,13 +81,17 @@
     color: white;
     border: 1px solid white;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 0px;
     font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
     margin: 0 auto;
     /* Căn giữa */
+    @media (max-width:576px) {
+            font-size: 0.5rem;
+            width: 60%;
+        }
 }
 
 .chapter-button:hover {
@@ -86,6 +109,10 @@
     margin-left: 10px;
     flex-shrink: 0;
     /* Đảm bảo không bị co lại */
+    @media (max-width:576px) {
+            font-size: 0.5rem;
+            margin-left: 2px;
+        }
 }
 
 p{

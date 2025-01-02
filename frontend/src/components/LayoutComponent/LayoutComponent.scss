@@ -3,4 +3,8 @@
     background: #262626;
     margin: 0px;
     padding: 1% 10%;
+    @media (max-width:576px) {
+            padding: 1% 2%;
+    
+        }
 }

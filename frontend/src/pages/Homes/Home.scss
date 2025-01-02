@@ -32,19 +32,19 @@
 }
 
 .manga-card {
-    flex: 1 6 16%; // Mỗi card chiếm 50%
+    flex: 1 6 14%; // Mỗi card chiếm 50%
     max-width: 50%; // Đảm bảo không vượt quá 50%
     padding: 5px; // Khoảng cách trong từng card
     box-sizing: border-box;
-
+    margin-right: 5px;
     @media (max-width: 768px) {
         flex: 1 1 50%;
         max-width: 50%;
     }
 
     @media (max-width: 576px) {
-        flex: 1 1 50%;
-        max-width: 50%;
+        flex: 1 1 48%;
+        max-width: 48%;
     }
 }
 
