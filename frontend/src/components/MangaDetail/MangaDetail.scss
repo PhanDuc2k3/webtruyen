@@ -1,0 +1,209 @@
+.manga-detail-container{
+    width: 100%;
+}
+
+.manga-detail-header h1{
+    color: #fab20d;
+}
+
+.manga-detail-content{
+    display: flex;
+    gap: 30px;
+    height: 500px;
+}
+
+.manga-detail-content-img{
+    background: #787878;
+    flex: 1 2 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.manga-detail-content-img img{
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    
+        /* Làm đầy khung div, cắt bớt nếu cần */
+}
+
+.manga-detail-content-inf{
+    background: #787878;
+    
+    flex: 2 2 70%;
+    padding: 20px;
+    
+}
+
+.manga-detail-content-inf-list{
+    display: flex;
+}
+
+.manga-detail-list-left{
+    width: 15%;
+}
+
+.manga-detail-list-left p{
+    color: white;
+    font-size: 24px;
+    padding: 5px 0px;
+}
+
+.manga-detail-list-right{
+    width: 85%;
+}
+
+.manga-detail-list-right p{
+    color: #C7CCCC;
+    font-size: 24px;
+    padding: 5px 0px;
+}
+
+.manga-detail-button{
+    display: flex;
+    margin: 30px 0px;
+}
+
+.manga-detail-button-FirstLast{
+    width: 10%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight:400;
+    margin-right: 30px;
+}
+
+.manga-detail-button-FirstLast:hover{
+    background: #fab20d;
+}
+
+.manga-detail-button-reloadPage{
+    width: 15%;
+    background-color: #fab20d;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.manga-detail-button-reloadPage:hover{
+    background-color: silver;
+    color: black;
+}
+.manga-detail-description{
+    margin-top: 50px;
+    width: 70%;
+    color: white;
+
+}
+
+.manga-detail-description-title{
+    border-bottom: 1px solid white;
+}
+
+.manga-detail-description-body{
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.manga-detail-latest-manga-release{
+    margin-top: 50px;
+    color:white;
+    width: 70%;
+}
+
+.manga-detail-latest-manga-release-title{
+    border-bottom: 1px solid white;
+}
+
+.manga-detail-latest-manga-release-list-chap{
+    margin-top: 50px;
+    
+}
+
+.manga-detail-latest-manga-release-list-chap input{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    padding: 0px 10px
+}
+
+.manga-detail-list-chap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.manga-detail-button-chap{
+    margin-top: 30px;
+    width: 30%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+}
+
+.manga-detail-chap-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.manga-detail-list-chap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.manga-detail-button-chap {
+    width: 30%; /* Chiếm 3 nút trên một hàng */
+}
+
+.manga-detail-load-more {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manga-detail-load-more button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.manga-detail-load-more button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.manga-detail-load-more {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manga-detail-load-more button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.manga-detail-load-more button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

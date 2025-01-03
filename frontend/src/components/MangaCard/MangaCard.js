@@ -1,7 +1,13 @@
 import React from "react";
 import "./MangaCard.scss"; // Import file CSS để tạo kiểu
+import { useNavigate } from "react-router-dom";
+const MangaCard = ({ imageUrl, children, rating, chapters }) => {
+  
+  const gotoChapter = useNavigate();
 
-const MangaCard = ({ imageUrl, children, rating,chapters }) => {
+  const onClickChapter = () => {
+    gotoChapter("/MangaDetail");
+  }
   // Hàm render sao
   const renderStars = (rating) => {
     const stars = [];
@@ -19,7 +25,7 @@ const MangaCard = ({ imageUrl, children, rating,chapters }) => {
     <div className="manga-card">
       {/* Phần ảnh */}
       <div className="manga-image">
-        <img src={imageUrl} alt="Manga" />
+        <img src={imageUrl} alt="Manga" onClick={onClickChapter}/>
       </div>
 
       {/* Phần tên */}

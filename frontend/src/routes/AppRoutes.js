@@ -7,6 +7,7 @@ import SignUp from "../pages/SignUp/SignUp";
 import MangaPage from "../pages/MangaPage/MangaPage";
 import ManhwaPage from "../pages/ManhwaPage/ManhwaPage";
 import ManhuaPage from "../pages/Manhua.page/ManhuaPage";
+import MangaDetail from "../components/MangaDetail/MangaDetail";
 const AppRoutes = () => {
   return (
     <Router>
@@ -17,7 +18,8 @@ const AppRoutes = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/mangaPage" element={<MangaPage />} />
           <Route path="/manhwaPage" element={<ManhwaPage />} />
-          <Route path="/manhuaPage" element={<ManhuaPage/>}/>
+          <Route path="/manhuaPage" element={<ManhuaPage />} />
+          <Route path="/MangaDetail" element={<MangaDetail/>}/>
         </Routes>
       </Layout>
     </Router>
