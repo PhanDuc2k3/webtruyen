@@ -12,12 +12,17 @@ const HeaderComponent = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State để kiểm tra menu đang mở hay không
     const gotoLogin = useNavigate();
     const gotoSignUp = useNavigate();
+    const gotoHome = useNavigate();
     const handleSingin = () => {
         gotoLogin("/login");
     }
 
     const handleSignup = () => {
         gotoSignUp("/signup");
+    }
+
+    const handleHome = () => {
+        gotoHome("/");
     }
     const showDrawer = () => {
         setOpen(true);
@@ -32,7 +37,7 @@ const HeaderComponent = () => {
     return (
         <div className="HeaderContainer">
             {/* Logo Website */}
-            <img src={IconWeb} alt="Website Icon" className="HeaderIcon" />
+            <img src={IconWeb} alt="Website Icon" className="HeaderIcon" onClick={handleHome} />
 
             {/* Thanh tìm kiếm */}
             <div className="custom-search-container">
