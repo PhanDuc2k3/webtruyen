@@ -3,16 +3,7 @@ const { genneralAccessToken, genneralRefreshToken } = require("./jwServices");
 
 const createUser = (newUser) => {
   return new Promise(async (resolve, reject) => {
-    const {
-      name,
-      email,
-      password,
-      confirmPassword,
-      dob,
-      phone,
-      avatar,
-      address,
-    } = newUser;
+    const { email, password, confirmPassword } = newUser;
     try {
       // Kiểm tra xem email đã tồn tại hay chưa
       const checkUser = await User.findOne({ email: email });
@@ -23,35 +14,27 @@ const createUser = (newUser) => {
         });
       }
 
-      // Tạo người dùng mới
+      // Kiểm tra mật khẩu và confirmPassword có khớp không
+      if (password !== confirmPassword) {
+        return resolve({
+          status: "ERR",
+          message: "Mật khẩu không khớp",
+        });
+      }
+
+      // Tạo người dùng mới với chỉ email và mật khẩu
       const createdUser = await User.create({
-        name,
-        nickname,
         email,
         password,
-        gender,
-        confirmPassword,
-        phone,
-        dob,
-        avatar,
-        address,
+        confirmPassword, // Chỉ lưu mật khẩu và email trong giai đoạn này
       });
 
-      // Nếu tạo thành công, thêm người dùng vào đầu danh sách
+      // Nếu tạo thành công
       if (createdUser) {
-        // Giả sử bạn có một mảng người dùng hiện tại trong cơ sở dữ liệu
-        let existingUsers = await User.find({}).sort({ _id: -1 }).exec(); // Lấy danh sách người dùng hiện tại và sắp xếp ngược lại (mới nhất lên đầu)
-
-        // Thêm người dùng mới vào đầu danh sách
-        existingUsers.unshift(createdUser);
-
-        // Cập nhật cơ sở dữ liệu nếu cần thiết (ví dụ: nếu bạn lưu danh sách người dùng trong một trường cụ thể)
-        // await updateUsersListInDatabase(existingUsers);
-
         resolve({
           status: "OK",
-          message: "SUCCESS",
-          data: createdUser,
+          message: "Đăng ký thành công, vui lòng cập nhật thông tin sau.",
+          data: createdUser,  // Trả về dữ liệu người dùng mới
         });
       }
     } catch (e) {
@@ -63,6 +46,7 @@ const createUser = (newUser) => {
     }
   });
 };
+
 
 const loginUser = (userLogin) => {
   return new Promise(async (resolve, reject) => {
