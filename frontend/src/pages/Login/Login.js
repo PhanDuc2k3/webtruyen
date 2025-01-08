@@ -1,39 +1,52 @@
 import React, { useState } from "react";
 import "./Login.scss";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import * as UserService from "../../services/UserService"; // Import UserService
+import { useAuth } from "../../contexts/authContext";  // Import hook useAuth
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
-    
+    const [avatarUrl, setAvatarUrl] = useState("");  // Thêm trạng thái avatarUrl
+    const [isLoggedIn, setIsLoggedIn] = useState(false);  // Thêm trạng thái isLoggedIn
+    const { login } = useAuth();  // Lấy hàm login từ context
+
     const navigate = useNavigate();
-    
+
     const handleHome = () => {
         navigate("/");
     };
-    
+
     const handleLogin = async (e) => {
         e.preventDefault();
-        
+
         setLoading(true);
-        setError("");
 
         try {
-            // Gọi hàm loginUser từ UserService
             const response = await UserService.loginUser({ email, password });
 
             if (response.status === "OK") {
-                // Lưu access_token vào localStorage sau khi đăng nhập thành công
-                localStorage.setItem("access_token", response.access_token);
-                navigate("/"); // Điều hướng đến trang chính sau khi đăng nhập thành công
+                // Gọi hàm login từ context để cập nhật trạng thái
+                login(response.access_token, response.avatarUrl);
+                setTimeout(() => navigate("/"), 2000);
+                toast.success("Đăng nhập thành công!", {
+                    position: "top-right",
+                    autoClose: 2000,
+                });
+
+                
             } else {
-                setError(response.message || "Đăng nhập không thành công.");
+                toast.error(response.message || "Đăng nhập không thành công.", {
+                    position: "top-right",
+                });
             }
         } catch (err) {
-            setError("Đã xảy ra lỗi, vui lòng thử lại.");
+            toast.error("Đã xảy ra lỗi, vui lòng thử lại.", {
+                position: "top-right",
+            });
         } finally {
             setLoading(false);
         }
@@ -68,12 +81,10 @@ const Login = () => {
                 <div className="remember-login-css">
                     <label className="remember-login__label">
                         <input type="checkbox" />
-                            Remember me
+                        Remember me
                     </label>
                     <a href="#" className="forgot-password">Quên mật khẩu?</a>
                 </div>
-
-                {error && <div className="error-message">{error}</div>}
 
                 <div className="button-container-login">
                     <div className="button-login-css">
@@ -86,6 +97,9 @@ const Login = () => {
                     </div>
                 </div>
             </form>
+
+            {/* ToastContainer để hiển thị thông báo */}
+            <ToastContainer />
         </div>
     );
 };

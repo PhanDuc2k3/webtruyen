@@ -8,6 +8,7 @@ import MangaPage from "../pages/MangaPage/MangaPage";
 import ManhwaPage from "../pages/ManhwaPage/ManhwaPage";
 import ManhuaPage from "../pages/Manhua.page/ManhuaPage";
 import MangaDetail from "../components/MangaDetail/MangaDetail";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 const AppRoutes = () => {
   return (
     <Router>
@@ -19,7 +20,8 @@ const AppRoutes = () => {
           <Route path="/mangaPage" element={<MangaPage />} />
           <Route path="/manhwaPage" element={<ManhwaPage />} />
           <Route path="/manhuaPage" element={<ManhuaPage />} />
-          <Route path="/MangaDetail" element={<MangaDetail/>}/>
+          <Route path="/MangaDetail" element={<MangaDetail />} />
+          <Route path="/profilePage" element ={<ProfilePage/>}/>
         </Routes>
       </Layout>
     </Router>
